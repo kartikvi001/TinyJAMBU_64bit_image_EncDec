@@ -1,0 +1,75 @@
+//////////////////////running veri_tinyJam64bit.v//////////////////////////
+////////////////////testing with 64bit_imgEnc cpp code/////////////////////
+
+-------------------key 0----------------------------
+//        ad = 64'b0; msg= 64'b0;
+        key=128'd0; nonce=96'd0;
+cipher=f407548941a6cd24
+tag=ef5c4f0781999739 ----------ok tested with cpp code
+
+//       key=128'd0; nonce=96'd0;
+        ad = 64'b1; msg= 64'b1;
+cipher=32e2e96c1e48fb50
+tag=305b471beadb87a5-----------ok tested with cpp code
+
+//             key=128'd0; nonce=96'd0;
+        ad = 64'd2; msg= 64'd1;
+cipher=1c9525ea9a1a2b40
+tag=fb9cb19e8017d9f-----------ok tested with cpp code        
+
+//        key=128'd0; nonce=96'd1;
+        ad = 64'd1; msg= 64'd1;
+cipher = 4969ca73cdb5b40a       
+tag = d8e0164e562d2048 -------ok tested
+
+//      key=128'd0; nonce=96'd255;
+        ad = 64'd1; msg= 64'd1;
+cipher=5b31ab824e244047
+tag=bc8148f6285eeaab-----------ok tested
+
+//        key=128'd0; nonce=96'd255;
+          ad = 64'd1; msg= 64'd2;
+cipher=53ad2e684e244044
+tag=12804fdc7225b703
+
+-------------------key 1----------------------------
+//        key=128'd1; nonce=96'd0;
+        ad = 64'd2; msg=64'd1;
+cipher=df0deb4d7578cef2
+tag=43b04966fc632b53 -------ok tested
+
+
+//        key=128'd1; nonce=96'd1;
+        ad = 64'd1; msg= 64'd1;
+cipher = 60cf2b2582365c54
+tag = e45ecf3de9adf1cf----------ok tested
+
+-------------------key 2----------------------------
+//         key=128'd2; nonce=96'd0;
+        ad = 64'd1; msg=64'd1;
+cipher=100b969f4d062915
+tag=3d5f2e253d989a4c--------ok tested
+
+//         key=128'd2; nonce=96'd1;
+        ad = 64'd1; msg=64'd1;
+cipher=34827b43c9bef928
+tag=49406a3cb367451a--------ok tested
+
+//         key=128'd2; nonce=96'd255;
+        ad = 64'd255; msg=64'd255;
+cipher=a71b46dbe83cf2ee
+tag=91e0dec73a3cc6bb--------ok tested
+
+
+-------------------key 10----------------------------
+//         key=128'd10; nonce=96'd255;
+        ad = 64'd255; msg=64'd255;
+cipher=97204fefbe649f6c
+tag=4dee1eddf7232091--------ok tested
+
+
+-------------------key 255----------------------------
+//        key=128'd255; nonce=96'd155;
+        ad = 64'd55; msg=64'd255;
+cipher=07d746730f37993b
+tag=a91570f79ef71224--------ok tested
